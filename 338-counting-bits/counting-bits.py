@@ -9,7 +9,7 @@ class Solution:
                 a=bin(i)
                 dp[i]=a.count('1')
                 i=i+1             
-            return dp        
+        return dp        
 
                 
 
