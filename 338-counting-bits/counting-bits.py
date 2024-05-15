@@ -7,9 +7,9 @@ class Solution:
             i=1
             while i<=n:
                 a=bin(i)
-                dp[i]=a.count('1')
-                i=i+1             
-        return dp        
+                dp[i]=a.count('1')  
+                i=i+1           
+            return dp        
 
                 
 
