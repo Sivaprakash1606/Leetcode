@@ -12,21 +12,15 @@ class Solution:
         if root.val == 1:
             return True    
         if root:
-            left = self.dfs(root.left)
-            right = self.dfs(root.right) 
-            if root.val == 2:
-                return left or right
-            elif root.val == 3:
-                return left and right    
+            return self.dfs(root)    
                 
     def dfs(self, root):
         if root is None:
             return False
-        if root.val <= 1:
-            if root.val == 0:
-
-                return 0
+        if root.val== 1:
             return 1
+        if root.val == 0:
+            return 0
         if root.val == 2: 
             return self.dfs(root.left) or self.dfs(root.right)
         elif root.val == 3:
