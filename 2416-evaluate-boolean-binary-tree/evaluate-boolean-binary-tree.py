@@ -25,8 +25,8 @@ class Solution:
         if root.val <= 1:
             if root.val == 0:
 
-                return False
-            return True
+                return 0
+            return 1
         if root.val == 2: 
             return self.dfs(root.left) or self.dfs(root.right)
         elif root.val == 3:
