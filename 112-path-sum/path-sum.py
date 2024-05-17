@@ -24,8 +24,6 @@ class Solution:
             return False        
     
     def dfs(self,root,total,targetSum ):
-        if not root:
-            return False
         total=total+root.val
         if root.left is None and root.right is None and total == targetSum:
             return True
