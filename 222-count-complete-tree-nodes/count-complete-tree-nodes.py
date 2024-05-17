@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        self.count = 0 
+        self.count = 0  
         if root:
             self.counts(root)
         return self.count
