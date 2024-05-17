@@ -8,29 +8,40 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
             return False
-
-        if root.left is None and root.right is None:
-            return root.val == targetSum    
-                
-        left = root.val
-        right = root.val
-
-        if root.left:
-            if self.dfs(root.left, left, targetSum):
+        left=root.val
+        right=root.val
+        l=False
+        r=False
+        if root.left is None and root.right is None and targetSum == root.val:
+            return True
+        if root:
+            if root.left:
+                l=self.dfs(root.left,left,targetSum)
+            if root.right:
+                r=self.dfs(root.right,right,targetSum)  
+            if l or r:
                 return True
-        if root.right:
-            if self.dfs(root.right, right, targetSum):
-                return True
-        return False
+            return False        
     
-    def dfs(self, root, total, targetSum):
-        total = total + root.val
-        if root.left is None and root.right is None:
-            return total == targetSum
+    def dfs(self,root,total,targetSum ):
+        if not root:
+            return False
+        total=total+root.val
+        if root.left is None and root.right is None and total == targetSum:
+            return True
         if root.left:
-            if self.dfs(root.left, total, targetSum):
+            if self.dfs(root.left,total,targetSum):
                 return True
-        if root.right:
+        if root.left:    
+            if self.dfs(root.right,total,targetSum):
+                return True
+        if root.right: 
             if self.dfs(root.right, total, targetSum):
-                return True
-        return False
+                return True        
+        return False    
+
+        
+
+
+
+        
