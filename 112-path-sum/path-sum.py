@@ -32,9 +32,6 @@ class Solution:
         if root.left:
             if self.dfs(root.left,total,targetSum):
                 return True
-        if root.left:    
-            if self.dfs(root.right,total,targetSum):
-                return True
         if root.right: 
             if self.dfs(root.right, total, targetSum):
                 return True        
