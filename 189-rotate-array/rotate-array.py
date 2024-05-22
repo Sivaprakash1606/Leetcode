@@ -5,5 +5,4 @@ class Solution:
             v = nums.pop()
             nums.insert(0, v)
             l += 1  
-        return nums
         
