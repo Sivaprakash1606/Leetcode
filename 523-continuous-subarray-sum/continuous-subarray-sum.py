@@ -7,7 +7,6 @@ class Solution:
             r=total%k
             if r not in reminder:
                 reminder[r]=i
-                print(i)
             elif i-reminder[r]>1:
                 return True
         return False          
