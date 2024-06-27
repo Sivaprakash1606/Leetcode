@@ -1,4 +1,4 @@
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        binary = bin(n)[2:]  
+        binary = bin(n)
         return binary.count('1')
