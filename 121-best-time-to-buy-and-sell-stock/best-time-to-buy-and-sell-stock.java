@@ -13,7 +13,7 @@ class Solution {
             } else {
                 l = r;
             }
-            r++;
+            r=r+1;
         }
         
         return maxx;
