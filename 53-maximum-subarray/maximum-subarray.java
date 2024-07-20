@@ -1,5 +1,6 @@
 class Solution {
     public int maxSubArray(int[] nums) {
+        // Using Greedy
         int m=nums[0];
         int c=0;
         for(int i:nums){
