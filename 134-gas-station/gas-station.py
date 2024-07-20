@@ -12,7 +12,7 @@ class Solution:
                 p=0
                 s=i+1
         return s          
-          
+
         # j=len(gas)-1
         # index=0
         # i=index
