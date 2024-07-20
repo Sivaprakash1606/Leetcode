@@ -9,6 +9,7 @@ class Solution:
             c=c+i
             m=max(c,m)    
         return m    
+        #time limit exested
         # if len(nums)==1:
         #     return nums[0]
         # maxx=maxx1=nums[0]
