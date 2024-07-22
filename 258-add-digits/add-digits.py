@@ -6,7 +6,6 @@ class Solution:
         summ=0
         for i in string:
             summ=summ+int(i)
-        string=str(summ)
         return self.addDigits(summ)
 
 
