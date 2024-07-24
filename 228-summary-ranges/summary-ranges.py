@@ -1,24 +1,14 @@
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
-        result = []
-        if not nums:
-            return result
-
-        left = 0
-        right = 0
-        while right < len(nums) - 1:
-            if nums[right] + 1 != nums[right + 1]:
-                if left == right:
-                    result.append(str(nums[left]))
-                else:
-                    result.append(str(nums[left]) + "->" + str(nums[right]))
-                left = right + 1
-            right += 1
-
-        # Handle the last range
-        if left == right:
-            result.append(str(nums[left]))
-        else:
-            result.append(str(nums[left]) + "->" + str(nums[right]))
-
-        return result
+        ans =[]
+        i = 0
+        while i < len(nums):
+            s=nums[i]
+            while i < len(nums)-1 and nums[i]+1 == nums[i+1]:
+                i+=1
+            if s != nums[i]:
+                ans.append(str(s)+ '->'+ str(nums[i]))
+            else:
+                ans.append(str(nums[i]))
+            i+=1
+        return ans
