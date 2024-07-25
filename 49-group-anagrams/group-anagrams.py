@@ -7,7 +7,7 @@ class Solution:
                 d[s].append(i)
             else:
                 d[s]=[i]
-        return list(d.values())
+        return d.values()
 
 
         
