@@ -1,17 +1,18 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        sd={}
-        td={}
-        for i in range(len(s)):
-            if s[i] not in sd and t[i] not in td:
-                sd[s[i]]=t[i]
-                td[t[i]]=s[i]
-            elif s[i] not in sd or t[i] not in td:
+        if len(s) != len(t):
+            return False
+        
+        s_to_t = {}
+        t_to_s = {}
+        
+        for s_char, t_char in zip(s, t):
+            if (s_char in s_to_t and s_to_t[s_char] != t_char) or (t_char in t_to_s and t_to_s[t_char] != s_char):
                 return False
-            else:
-                if sd[s[i]]!=t[i] or td[t[i]]!=s[i] :
-                    return False
-        return True            
+            s_to_t[s_char] = t_char
+            t_to_s[t_char] = s_char
+        
+        return True
                     
 
 
