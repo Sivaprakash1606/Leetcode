@@ -15,8 +15,10 @@ class Solution:
                     dp[i][j]=dp[i-1][j]
                 if s2[j-1]==s3[i+j-1]:
                     dp[i][j]=dp[i][j] or dp[i][j-1] 
-        return dp[m][n]               
+        return dp[m][n] 
 
+
+        # Wrong one
         # if len(s1) + len(s2) != len(s3):
         #     return False
         # i=0
