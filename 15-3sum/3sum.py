@@ -43,6 +43,25 @@ class Solution:
         # return result                
 
 
+        # st = set()  # Step 1
+        # n = len(nums)  # Step 2
+
+        # for i in range(n):  # Step 3
+        #     hashset = set()  # Step 4
+        #     for j in range(i + 1, n):  # Step 5
+        #         # Calculate the 3rd element:
+        #         third = -(nums[i] + nums[j])  # Step 6
+
+        #         # Find the element in the set:
+        #         if third in hashset:  # Step 7
+        #             temp = [nums[i], nums[j], third]  # Step 8
+        #             temp.sort()  # Step 9
+        #             st.add(tuple(temp))  # Step 10
+
+        #         hashset.add(nums[j])  # Step 11
+
+        # ans = list(st)  # Step 12
+        # return ans  # Step 13
 
 
 
