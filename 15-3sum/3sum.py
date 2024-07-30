@@ -7,14 +7,13 @@ class Solution:
             l=i+1
             r=n-1
             while l<r:
-                summ=[nums[i],nums[l],nums[r]]
-                sums=sum(summ)
-                if sums>0:
+                summ=nums[i]+nums[l]+nums[r]
+                if summ>0:
                     r=r-1
-                elif sums<0:
+                elif summ<0:
                     l=l+1
                 else:
-                    result.add(tuple(summ))   
+                    result.add((nums[i], nums[l], nums[r]))
                     l=l+1
                     r=r-1
         return result
