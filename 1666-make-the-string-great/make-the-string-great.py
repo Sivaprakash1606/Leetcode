@@ -4,6 +4,7 @@ class Solution:
         for i in s:
             if stack and ((i.isupper() and stack[-1]==i.lower()) or (i.islower() and stack[-1]==i.upper())):
                 stack.pop()
+                continue
             else:
                 stack.append(i)
         return "".join(stack)  
