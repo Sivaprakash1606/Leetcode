@@ -5,9 +5,9 @@ class Solution:
         for i in range(len(nums)):
             s=0
             for j in range(i,len(nums)):
-                s+=nums[j]
+                s+=nums[j]%MOD
                 sub_sum.append(s)
-                
+
         # l,r=0,1
         # while r<=n:
         #     summ=nums[l]
