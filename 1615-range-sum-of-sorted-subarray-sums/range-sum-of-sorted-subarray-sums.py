@@ -2,16 +2,11 @@ class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         MOD=10**9+7
         sub_sum=[]
-        l,r=0,1
-        while r<=n:
-            summ=nums[l]
-            sub_sum.append(summ)
-            while r<n:
-                summ=summ+nums[r]
-                sub_sum.append(summ)
-                r=r+1
-            l=l+1
-            r=l+1 
+        for i in range(len(nums)):
+            s=0
+            for j in range(i,len(nums)):
+                s+=nums[j]
+                sub_sum.append(s)
 
     
         
