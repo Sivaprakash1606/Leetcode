@@ -7,6 +7,16 @@ class Solution:
             for j in range(i,len(nums)):
                 s+=nums[j]
                 sub_sum.append(s)
+                
+        # l,r=0,1
+        # while r<=n:
+        #     summ=nums[l]
+        #     sub_sum.append(summ)
+        #     while r<n:
+        #         summ=summ+nums[r]
+        #         sub_sum.append(summ)
+        #         r=r+1
+        #     l=l+1                
 
     
         
