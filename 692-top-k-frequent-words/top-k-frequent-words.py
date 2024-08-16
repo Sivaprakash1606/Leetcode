@@ -11,12 +11,9 @@ class Solution:
         for key,value in freq.items():
             heapq.heappush(heap,(-value,key))    
 
-        print(heap) 
-
         result = []
         while len(result)<k and heap:
-            value,key=heapq.heappop(heap)
-            result.append(key)
+            result.append(heapq.heappop(heap)[1])
         return result          
 
         
