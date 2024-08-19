@@ -3,11 +3,9 @@ class Solution:
         stack=[]
         for i in s:
             if i=="]":
-                j=len(stack)
                 word=""
                 while stack[-1] !="[":
-                    w=stack.pop()
-                    word=w+word
+                    word=stack.pop()+word
                 stack.pop()
                 num=""
                 while len(stack)>0 and stack[-1].isdigit():
