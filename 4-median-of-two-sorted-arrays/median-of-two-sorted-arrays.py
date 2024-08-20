@@ -1,7 +1,7 @@
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        length = (len(nums1) + len(nums2)) // 2  # Corrected the calculation of length
-        even = (len(nums1) + len(nums2)) % 2 == 0  # Check if the total length is even
+        length = (len(nums1) + len(nums2)) // 2 
+        even = (len(nums1) + len(nums2)) % 2 == 0  
         result = []
         l1, l2 = 0, 0
         
@@ -13,10 +13,9 @@ class Solution:
                 l1 += 1
             else:
                 result.append(nums2[l2])
-                l2 += 1
-        
+                l2 += 1        
         if even:
-            ans = (result[length] + result[length - 1]) / 2.0  # Calculate the average of the two middle numbers
+            ans = (result[length] + result[length - 1]) / 2.0  
             return ans
         return float(result[length])
 
