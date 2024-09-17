@@ -3,10 +3,8 @@ class Solution:
         g.sort()
         s.sort()
         i=j=0
-        while j<len(s):
+        while i<len(g) and j<len(s):
             if g[i]<=s[j]:
                 i=i+1
             j=j+1
-            if i==len(g):
-                break
         return i        
