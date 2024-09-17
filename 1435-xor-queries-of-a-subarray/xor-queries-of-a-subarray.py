@@ -1,5 +1,7 @@
 class Solution:
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
+        
+        # prefix sum without extra memory
         n=len(arr)
         for i in range(1,n):
             arr[i]=arr[i]^arr[i-1]
@@ -13,7 +15,7 @@ class Solution:
                 result.append(ans)
         return result            
 
-
+        # prefix sum with extra memory
         # n=len(arr)
         # prefix=[0] * (n+1)
 
